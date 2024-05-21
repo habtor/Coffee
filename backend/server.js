@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import usersRoute from "./routes/users.js";
+import coffeeRoute from "./routes/coffee.js";
 import connection from "./db/connection.js";
 
 dotenv.config();
@@ -14,6 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/users", usersRoute);
+app.use("/coffee", coffeeRoute);
 
 app.listen(PORT, () => {
   connection();
