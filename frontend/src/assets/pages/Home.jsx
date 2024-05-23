@@ -1,9 +1,9 @@
-import Navbar from "../components/navbar";
+
 
 function Home() {
   return (
-    <div>
-      <Navbar />
+    <div className=" max-w-[1200px] m-auto h-[2000px] ">
+      
     </div>
   );
 }
