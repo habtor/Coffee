@@ -1,25 +1,10 @@
-import { useState, useEffect } from "react";
 import { GoPerson } from "react-icons/go";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 
 function Navbar() {
-  const [navScroll, setNavScroll] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        setNavScroll(true);
-      } else {
-        setNavScroll(false);
-      }
-    });
-  }, []);
-
   return (
     <nav
-      className={`flex m-auto items-center justify-between px-12 font-bold text-sm ${
-        navScroll ? "bg-navColor text-white " : ""
-      } sticky top-0 lg:px-[300px] py-3`}
+      className={`flex m-auto items-center justify-between px-12 font-bold text-sm bg-main sticky top-0 py-3`}
     >
       <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg">
         <GoPerson className="text-black text-lg" />
