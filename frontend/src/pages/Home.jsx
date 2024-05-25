@@ -1,15 +1,13 @@
+import HeroSection from "../components/heroSection";
 import Navbar from "../components/navbar";
-import beans from "../assets/beans2.png";
+import PopularDrinks from "../components/popularDrinks";
 
 function Home() {
   return (
-    <div className=" max-w-[1200px] m-auto h-[2000px] ">
+    <div className="relative sm:w-full max-w-[1200px] w-[306px] m-auto h-[8000px] ">
       <Navbar />
-      <h1 className="text-6xl text-center mt-24">
-        Saleh’s Best <br /> Yemeni Coffee in Town
-      </h1>
-
-      <img src={beans} alt="Coffee beans" />
+      <HeroSection />
+      <PopularDrinks />
     </div>
   );
 }

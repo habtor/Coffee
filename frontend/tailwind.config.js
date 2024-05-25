@@ -7,6 +7,8 @@ export default {
         main: "#F5F2EB",
         btnColor: "#E4D2A4",
         navColor: "#333335",
+        cardColor: "#FAF7EF",
+        sectionColor: "#EDE7D7",
       },
     },
   },

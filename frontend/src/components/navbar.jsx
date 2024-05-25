@@ -4,7 +4,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi2";
 function Navbar() {
   return (
     <nav
-      className={`flex m-auto items-center justify-between px-12 font-bold text-sm bg-main sticky top-0 py-3`}
+      className={`flex m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 py-3 z-10`}
     >
       <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg">
         <GoPerson className="text-black text-lg" />
