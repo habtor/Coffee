@@ -1,6 +1,6 @@
 function ContactForm() {
   return (
-    <div className="bg-cardColor rounded-lg sm:flex justify-between items-center z-10 mx-auto">
+    <div className="bg-cardColor rounded-lg flex sm:flex-row flex-col justify-between items-center z-10 mx-auto">
       <form action="" className="p-10 h-full w-full ">
         <label htmlFor="">Name</label>
         <input
@@ -28,7 +28,7 @@ function ContactForm() {
         />
       </form>
       <div
-        className="w-full h-full bg-cover bg-center  rounded-r-lg"
+        className="w-full h-64 sm:h-full bg-cover bg-center  sm:rounded-r-lg "
         style={{
           backgroundImage: `url(https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2NvZmZlZS01NzEyNDU1NzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoiMTIwMCJ9fX0=)`,
         }}
