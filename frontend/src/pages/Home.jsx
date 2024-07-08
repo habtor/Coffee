@@ -2,8 +2,8 @@ import HeroSection from "../components/heroSection";
 import Navbar from "../components/navbar";
 import PopularDrinksSection from "../components/drinks/popularDrinksSection";
 import PopularCoffeBeans from "../components/beans/popularCoffeBeansSection";
-
 import ReviewsSection from "../components/reviews/reviewSection";
+import ContactUs from "../components/contacts/contactUsSection";
 
 function Home() {
   return (
@@ -13,6 +13,7 @@ function Home() {
       <PopularDrinksSection />
       <PopularCoffeBeans />
       <ReviewsSection />
+      <ContactUs />
     </div>
   );
 }
