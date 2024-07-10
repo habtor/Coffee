@@ -28,7 +28,7 @@ function ContactForm() {
         />
       </form>
       <div
-        className="w-full h-64 sm:h-full bg-cover bg-center  sm:rounded-r-lg "
+        className="w-full h-64 sm:h-full bg-cover bg-center  sm:rounded-r-lg rounded-b-lg sm:rounded-bl-none "
         style={{
           backgroundImage: `url(https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL2NvZmZlZS01NzEyNDU1NzEuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjoiMTIwMCJ9fX0=)`,
         }}
