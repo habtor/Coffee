@@ -9,15 +9,16 @@ import Footer from "../components/footer/footer";
 function Home() {
   return (
     <>
-      <div className="relative sm:w-full max-w-[1200px] w-[306px] m-auto  ">
+      <div className="relative sm:w-full w-[306px] m-auto  ">
         <Navbar />
         <HeroSection />
         <PopularDrinksSection />
         <PopularCoffeBeans />
         <ReviewsSection />
         <ContactUs />
+        <Footer />
       </div>
-      <Footer />
+      
     </>
   );
 }

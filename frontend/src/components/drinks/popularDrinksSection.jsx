@@ -16,7 +16,7 @@ function PopularDrinksSection() {
       </div>
       <div className="relative">
         <div className="absolute h-full bg-sectionColor w-full top-[60px]  rounded-xl"></div>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row max-w-[1200px] m-auto">
           <PopularDrink />
           <PopularDrink />
         </div>

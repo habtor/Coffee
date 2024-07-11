@@ -16,7 +16,7 @@ function ContactUs() {
       </div>
       <div className="relative">
         <div className="absolute h-full bg-sectionColor w-full sm:top-[60px]  rounded-xl"></div>
-        <div className="flex flex-col sm:flex-row">
+        <div className="flex flex-col sm:flex-row max-w-[1200px] m-auto">
           <ContactForm />
         </div>
       </div>

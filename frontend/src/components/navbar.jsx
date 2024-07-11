@@ -27,9 +27,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`flex flex-col m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 py-3 z-20`}
+      className={`flex flex-col m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 py-3 z-20  `}
     >
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-full max-w-[1200px]">
         <div
           className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg"
           onClick={handleMenu}
