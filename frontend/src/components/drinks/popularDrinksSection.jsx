@@ -19,6 +19,7 @@ function PopularDrinksSection() {
         <div className="flex flex-col sm:flex-row max-w-[1200px] m-auto">
           <PopularDrink />
           <PopularDrink />
+          <PopularDrink />
         </div>
       </div>
     </div>

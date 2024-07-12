@@ -27,7 +27,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`flex flex-col m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 py-3 z-20  `}
+      className={`flex flex-col m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 py-3 z-20 w-[306px] sm:w-full`}
     >
       <div className="flex items-center justify-between w-full max-w-[1200px]">
         <div
