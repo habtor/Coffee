@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { GoPerson } from "react-icons/go";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -44,17 +45,20 @@ function Navbar() {
         </div>
         <li className=" hidden sm:block">Home</li>
         <li className=" hidden sm:block">Products</li>
-
-        <img
-          src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUrOuxTLlno4UizjDyq8IhFZTT0tE-PVcOT24RNjJ2A5IbRwJOvUEMT7SHY4BZYcikYG5ytDPCV2Vj749-R9nYxV-Lu2KDwFljVigT2KpZfPVo3E9H9rf1TA"
-          alt=""
-          className="h-16 rounded-full"
-        />
+        <Link to="/">
+          <img
+            src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUrOuxTLlno4UizjDyq8IhFZTT0tE-PVcOT24RNjJ2A5IbRwJOvUEMT7SHY4BZYcikYG5ytDPCV2Vj749-R9nYxV-Lu2KDwFljVigT2KpZfPVo3E9H9rf1TA"
+            alt=""
+            className="h-16 rounded-full"
+          />
+        </Link>
         <li className=" hidden sm:block">About us</li>
         <li className=" hidden sm:block">Contact us</li>
-        <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg">
-          <HiOutlineShoppingCart className=" text-black text-lg" />
-        </div>
+        <Link to="/cart">
+          <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg">
+            <HiOutlineShoppingCart className=" text-black text-lg" />
+          </div>
+        </Link>
       </div>
       <div
         className={`${

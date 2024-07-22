@@ -1,4 +1,5 @@
-import PopularCoffeeBeans from "./popularBeans";
+import PopularCoffeeBeans from "./popularCoffeeBean";
+import { beansArray } from "./beans";
 
 function PopularCoffeBeans() {
   return (
@@ -17,9 +18,16 @@ function PopularCoffeBeans() {
       <div className="relative">
         <div className="absolute h-full bg-sectionColor w-full top-[60px]  rounded-xl"></div>
         <div className="flex flex-col sm:flex-row max-w-[1200px] m-auto">
-          <PopularCoffeeBeans />
-          <PopularCoffeeBeans />
-          <PopularCoffeeBeans />
+          {beansArray.map((bean) => (
+            <PopularCoffeeBeans
+              key={bean.id}
+              id={bean.id}
+              price={bean.price}
+              name={bean.name}
+              stars={bean.stars}
+              image={bean.image}
+            />
+          ))}
         </div>
       </div>
     </div>
