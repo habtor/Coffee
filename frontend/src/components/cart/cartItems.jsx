@@ -20,8 +20,9 @@ function CartItems() {
       </div>
       <div className="relative">
         <div className="absolute h-full bg-sectionColor w-full top-[60px]  rounded-xl"></div>
-        <div className="flex flex-col max-w-[1200px] m-auto">
-          <div className="bg-cardColor p-4 rounded-lg w-64 m-auto mb-5 border-black relative">
+
+        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row justify-center">
+          <div className="bg-cardColor p-4 rounded-lg w-64 sm:w-[50%] m-auto sm:m-0 mb-5 border-black relative">
             {cart.map((item) => (
               <Item
                 key={item.id}
@@ -35,8 +36,6 @@ function CartItems() {
             <Item />
             <Item />
           </div>
-        </div>
-        <div>
           <Total />
         </div>
       </div>
