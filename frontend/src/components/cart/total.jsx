@@ -1,7 +1,7 @@
 function Total() {
   return (
     <div>
-      <div className="h-[1px] w-[90%] m-auto  bg-black opacity-25 z-0"></div>
+      <div className="sm:hidden h-[1px] w-[90%] m-auto  bg-black opacity-25 z-0"></div>
       <div className="bg-cardColor p-4 rounded-lg w-64 m-auto mb-5 border-black relative z-10 mt-5  px-5">
         <div className="flex justify-between">
           <p>Subtotal</p>
