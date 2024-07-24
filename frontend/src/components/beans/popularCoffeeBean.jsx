@@ -3,10 +3,10 @@ import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiFillStar } from "react-icons/ai";
 import useCartStore from "../stores/cartStore";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function PopularCoffeeBeans({ id, name, price, stars, image }) {
   const [added, setAdded] = useState(false);
-  console.log(added);
 
   const addToCart = useCartStore((state) => state.addToCart);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
@@ -35,10 +35,13 @@ function PopularCoffeeBeans({ id, name, price, stars, image }) {
           </div>
 
           <div>
-            <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg mb-1">
-              <LiaExclamationCircleSolid className="text-black text-lg" />
-            </div>
-            <div alt="add to cart"
+            <Link to={`/item/`} className="text-xs text-gray-500">
+              <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg mb-1">
+                <LiaExclamationCircleSolid className="text-black text-lg" />
+              </div>
+            </Link>
+            <div
+              alt="add to cart"
               onClick={handleAddToCart}
               className={`cursor-pointer h-8 w-8 flex items-center justify-center rounded-lg ${
                 added ? "bg-orange-900" : "bg-btnColor"

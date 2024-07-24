@@ -9,6 +9,7 @@ export default {
         navColor: "#333335",
         cardColor: "#FAF7EF",
         sectionColor: "#EDE7D7",
+        coffeeColor: "#994F1B",
       },
     },
   },

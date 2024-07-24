@@ -25,7 +25,7 @@ function Item({ id, name, price, image }) {
           className="rounded-lg h-28 w-20 border border-black"
         />
         <div className="hidden sm:block ml-2">
-          <p>Vanilla Late</p>
+          <p>{name}</p>
           <p>${price}</p>
         </div>
       </div>
