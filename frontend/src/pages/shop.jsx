@@ -1,4 +1,4 @@
-import BeansStore from "../components/shop/beans.jsx";
+import BeansStore from "../components/shop/beansStore.jsx";
 import SearchBar from "../components/shop/searchBar.jsx";
 
 function Shop() {

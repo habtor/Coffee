@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ItemDetails from "./pages/itemDetails";
 import Shop from "./pages/shop";
+import Profile from "./pages/profile";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/item" element={<ItemDetails />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         <Footer />
       </div>

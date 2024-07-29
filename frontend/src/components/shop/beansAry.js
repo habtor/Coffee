@@ -1,11 +1,11 @@
+import cofff2 from "../../assets/cofff2.png";
 export const beansArray = [
   {
     id: 1,
     name: "Vanilla Latte",
     price: 10,
     stars: 4,
-    image:
-      "https://i.pinimg.com/736x/11/0f/48/110f489e7c28d5977cf689006876b1ea.jpg",
+    image: cofff2,
   },
   {
     id: 2,
@@ -20,8 +20,7 @@ export const beansArray = [
     name: "Vanilla Latte",
     price: 20.24,
     stars: 3,
-    image:
-      "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRloxwo75d9lhHBuSGXWWR3Aw7bMt-p13EBW-kNqcBUkeP1oiLluHiedM7luTqY5z0YMe2hz0iw6XJRK5LIOw7gRBGdT28nuitdIRle_dGWZYYEQYKW-_-D",
+    image: cofff2,
   },
   {
     id: 4,
