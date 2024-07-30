@@ -10,16 +10,18 @@ import Profile from "./pages/profile";
 function App() {
   return (
     <Router>
-      <div className="bg-main h-full">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/item" element={<ItemDetails />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-        <Footer />
+      <div className="bg-main h-full ">
+        <div className="mx-2">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/item" element={<ItemDetails />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/profile" element={<Profile />} />
+          </Routes>
+          <Footer />
+        </div>
       </div>
     </Router>
   );

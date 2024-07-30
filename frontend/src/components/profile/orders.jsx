@@ -7,6 +7,7 @@ function Orders() {
       <div className="relative">
         <div className="absolute h-full bg-sectionColor w-full top-[60px]  rounded-xl"></div>
         <div className="relative w-[250px] sm:w-full max-w-[1100px] m-auto bg-cardColor rounded-lg">
+          <h1 className="p-5 text-lg fonts-bold">My Orders</h1>
           {beansArray.map((bean) => (
             <div className=" p-2 m-auto" key={bean.id}>
               <OneOrder

@@ -3,10 +3,14 @@ import { GoPerson } from "react-icons/go";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import useCartStore from "./stores/cartStore";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const cart = useCartStore((state) => state.cart);
+  console.log(cart);
 
   const handleMenu = () => {
     if (!isMobile && !showMenu) return;
@@ -41,7 +45,12 @@ function Navbar() {
             ) : (
               <AiOutlineMenu className="text-black text-lg" />
             ))}
-          {!isMobile && <GoPerson className="text-black text-lg" />}
+          {!isMobile && (
+            <Link to={"profile"}>
+              {" "}
+              <GoPerson className="text-black text-lg" />
+            </Link>
+          )}
         </div>
         <li className=" hidden sm:block">Home</li>
         <li className=" hidden sm:block">Products</li>
@@ -55,8 +64,15 @@ function Navbar() {
         <li className=" hidden sm:block">About us</li>
         <li className=" hidden sm:block">Contact us</li>
         <Link to="/cart">
-          <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg">
+          <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg relative">
             <HiOutlineShoppingCart className=" text-black text-lg" />
+            <div
+              className={`${
+                !cart.length ? "hidden" : ""
+              } absolute left-[-5px] bottom-[-5px] h-4 w-4 bg-coffeeColor text-center rounded-full text-white`}
+            >
+              {cart.length}
+            </div>
           </div>
         </Link>
       </div>
