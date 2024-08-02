@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FiMinusCircle } from "react-icons/fi";
-import useCartStore from "../stores/cartStore";
+import useCartStore from "../zustandStore/cartStore";
 
 function Item({ id, name, price, image }) {
   const [quantity, setQuantity] = useState(1);

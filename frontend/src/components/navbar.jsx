@@ -3,14 +3,13 @@ import { GoPerson } from "react-icons/go";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import useCartStore from "./stores/cartStore";
+import useCartStore from "./zustandStore/cartStore";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   const cart = useCartStore((state) => state.cart);
-  console.log(cart);
 
   const handleMenu = () => {
     if (!isMobile && !showMenu) return;

@@ -1,7 +1,7 @@
 import { LiaExclamationCircleSolid } from "react-icons/lia";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiFillStar } from "react-icons/ai";
-import useCartStore from "../stores/cartStore";
+import useCartStore from "../zustandStore/cartStore";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 

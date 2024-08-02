@@ -5,6 +5,12 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  orders: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Coffee",
+    },
+  ],
 });
 
 const User = mongoose.model("User", userSchema);

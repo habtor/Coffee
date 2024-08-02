@@ -1,6 +1,22 @@
 import beans from "../assets/cofff2.png";
+import useSelectedCoffee from "./zustandStore/selectedCoffee";
+import useGetOneCoffee from "../hooks/getOneCoffee";
 
 function Item() {
+  const { selectedCoffee } = useSelectedCoffee();
+  if (!selectedCoffee) {
+    return <div>no no</div>;
+  }
+  // console.log(selectdCoffee);
+  const { loading, data, error } = useGetOneCoffee();
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
     <div className="mt-16 ">
       <div className="flex items-center justify-center">
@@ -25,13 +41,10 @@ function Item() {
               Coffee
             </h1>
             <h1 className="mt-[1vw] xl:text-[1.5vw] text-coffeeColor text-xl font-bold">
-              Mocha Coffee
+              {data.name}
             </h1>
             <p className="text-coffeeColor text-lg mt-2  sm:mt-[1vw]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-              explicabo voluptate ad ea nam recusandae ab maiores id laborum
-              magni facilis, dolorum nobis, ipsa soluta, sed non harum. Labore,
-              illo.
+              {data.description}
             </p>
           </div>
         </div>

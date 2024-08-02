@@ -1,6 +1,6 @@
 import Item from "./item";
 import Total from "./total";
-import useCartStore from "../stores/cartStore";
+import useCartStore from "../zustandStore/cartStore";
 
 function CartItems() {
   const cart = useCartStore((state) => state.cart);

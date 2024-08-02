@@ -4,7 +4,6 @@ import {
   createCoffee,
   getCoffeeById,
 } from "../controllers/coffee.js";
-import e from "express";
 
 const router = express.Router();
 
