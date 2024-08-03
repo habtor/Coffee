@@ -5,9 +5,7 @@ import useSelectedCoffee from "../zustandStore/selectedCoffee";
 
 function BeansStore() {
   const { loading, data, error } = useGetCoffee();
-  const { selectedCoffee, setSelectedCoffee } = useSelectedCoffee();
-
-  console.log(selectedCoffee);
+  const { setSelectedCoffee } = useSelectedCoffee();
 
   const handleSelectCoffee = (coffee) => {
     setSelectedCoffee(coffee);

@@ -1,4 +1,4 @@
-import Item from "../components/itemDetails";
+import Item from "../components/itemDetails/itemDetails";
 
 function ItemDetails() {
   return (

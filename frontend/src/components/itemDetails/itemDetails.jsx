@@ -1,11 +1,11 @@
-import beans from "../assets/cofff2.png";
-import useSelectedCoffee from "./zustandStore/selectedCoffee";
-import useGetOneCoffee from "../hooks/getOneCoffee";
+import beans from "../../assets/cofff2.png";
+import useSelectedCoffee from "../zustandStore/selectedCoffee";
+import useGetOneCoffee from "../../hooks/getOneCoffee";
 
 function Item() {
   const { selectedCoffee } = useSelectedCoffee();
   if (!selectedCoffee) {
-    return <div>no no</div>;
+    return <div>no details</div>;
   }
   // console.log(selectdCoffee);
   const { loading, data, error } = useGetOneCoffee();
@@ -32,18 +32,16 @@ function Item() {
       </div>
 
       <div className="bg-sectionColor h-full w-full rounded-xl">
-        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row justify-center items-center">
+        <div className="max-w-[1200px] m-auto flex flex-col sm:flex-row justify-center items-start sm:items-end">
           <div className="min-h-48 p-4 rounded-lg w-full sm:w-[100%] m-auto sm:m-0 mb-5 border-black relative">
-            <img className="w-full" src={beans} alt="" />
+            <img className="max-w-[350px] w-full" src={beans} alt="" />
           </div>
-          <div className=" relative p-5 ">
-            <h1 className=" xl:text-[2vw] md:text-2xl text-xl font-bold">
-              Coffee
-            </h1>
-            <h1 className="mt-[1vw] xl:text-[1.5vw] text-coffeeColor text-xl font-bold">
+          <div className=" relative px-5 pb-5 w-full">
+            <h1 className=" text-2xl font-bold">Coffee</h1>
+            <h1 className="mt-[1vw]  text-coffeeColor text-4xl font-bold">
               {data.name}
             </h1>
-            <p className="text-coffeeColor text-lg mt-2  sm:mt-[1vw]">
+            <p className="text-coffeeColor text-lg mt-2  ">
               {data.description}
             </p>
           </div>

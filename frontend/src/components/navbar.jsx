@@ -51,8 +51,13 @@ function Navbar() {
             </Link>
           )}
         </div>
-        <li className=" hidden sm:block">Home</li>
-        <li className=" hidden sm:block">Products</li>
+
+        <Link to="/">
+          <li className=" hidden sm:block">Home</li>
+        </Link>
+        <Link to="/shop">
+          <li className=" hidden sm:block">Products</li>
+        </Link>
         <Link to="/">
           <img
             src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUrOuxTLlno4UizjDyq8IhFZTT0tE-PVcOT24RNjJ2A5IbRwJOvUEMT7SHY4BZYcikYG5ytDPCV2Vj749-R9nYxV-Lu2KDwFljVigT2KpZfPVo3E9H9rf1TA"
