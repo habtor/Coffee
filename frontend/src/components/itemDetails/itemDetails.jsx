@@ -1,6 +1,7 @@
 import beans from "../../assets/cofff2.png";
 import useSelectedCoffee from "../zustandStore/selectedCoffee";
 import useGetOneCoffee from "../../hooks/getOneCoffee";
+import Sweeper from "./sweeper";
 
 function Item() {
   const { selectedCoffee } = useSelectedCoffee();
@@ -44,6 +45,7 @@ function Item() {
             <p className="text-coffeeColor text-lg mt-2  ">
               {data.description}
             </p>
+            <Sweeper />
           </div>
         </div>
       </div>
