@@ -52,10 +52,10 @@ function Navbar() {
           )}
         </div>
 
-        <Link to="/">
+        <Link className=" hidden sm:block" to="/">
           <li className=" hidden sm:block">Home</li>
         </Link>
-        <Link to="/shop">
+        <Link className=" hidden sm:block" to="/shop">
           <li className=" hidden sm:block">Products</li>
         </Link>
         <Link to="/">
