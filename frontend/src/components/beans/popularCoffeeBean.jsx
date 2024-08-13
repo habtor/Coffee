@@ -20,7 +20,7 @@ function PopularCoffeeBeans({ id, name, price, stars, image }) {
   };
   return (
     <div className="bg-cardColor p-4 pb-2 rounded-lg w-56 m-auto mb-5 sm:mb-0 border-[1px] border-black relative">
-      <img src={image} alt="" className="rounded-lg h-48 w-48 m-auto" />
+      <img src={image} alt="" className="rounded-lg m-auto" />
       <div className="mt-2">
         <div className="flex items-center justify-between my-1">
           <div className="font-bold flex flex-col item bg-resd-300 h-full">

@@ -1,7 +1,14 @@
 import PopularCoffeeBeans from "./popularCoffeeBean";
 import { beansArray } from "./beans";
+import useGetCoffee from "../../hooks/getAllCoffee";
 
 function PopularCoffeBeans() {
+  const { loading, data, error } = useGetCoffee();
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  console.log(data);
+
   return (
     <div className="mt-16">
       <div className="flex items-center justify-center">
@@ -18,16 +25,19 @@ function PopularCoffeBeans() {
       <div className="relative">
         <div className="absolute h-full bg-sectionColor w-full top-[60px]  rounded-xl"></div>
         <div className="flex flex-col sm:flex-row max-w-[1200px] m-auto">
-          {beansArray.map((bean) => (
-            <PopularCoffeeBeans
-              key={bean.id}
-              id={bean.id}
-              price={bean.price}
-              name={bean.name}
-              stars={bean.stars}
-              image={bean.image}
-            />
-          ))}
+          {data.map(
+            (bean) =>
+              bean.rating > 12 && (
+                <PopularCoffeeBeans
+                  key={bean._id}
+                  id={bean._id}
+                  price={bean.price}
+                  name={bean.name}
+                  stars={bean.stars}
+                  image={bean.image}
+                />
+              )
+          )}
         </div>
       </div>
     </div>
