@@ -3,7 +3,7 @@ import { GoPerson } from "react-icons/go";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import useCartStore from "./zustandStore/cartStore";
+import useCartStore from "../zustandStore/cartStore";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -65,7 +65,9 @@ function Navbar() {
             className="h-16 rounded-full"
           />
         </Link>
-        <li className=" hidden sm:block">About us</li>
+        <Link className=" hidden sm:block" to="/addItem">
+          <li className=" hidden sm:block">About us</li>
+        </Link>
         <li className=" hidden sm:block">Contact us</li>
         <Link to="/cart">
           <div className="bg-btnColor h-8 w-8 flex items-center justify-center rounded-lg relative">

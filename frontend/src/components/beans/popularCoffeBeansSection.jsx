@@ -7,8 +7,7 @@ function PopularCoffeBeans() {
   if (loading) {
     return <div>Loading...</div>;
   }
-  console.log(data);
-
+  
   return (
     <div className="mt-16">
       <div className="flex items-center justify-center">

@@ -1,11 +1,12 @@
 import Footer from "./components/footer/footer";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Nav/navbar";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ItemDetails from "./pages/itemDetails";
 import Shop from "./pages/shop";
 import Profile from "./pages/profile";
+import AddItem from "./pages/addItem";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/addItem" element={<AddItem />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/item" element={<ItemDetails />} />
             <Route path="/shop" element={<Shop />} />
