@@ -12,8 +12,9 @@ function App() {
   return (
     <Router>
       <div className="bg-main h-full ">
+        <Navbar />
+
         <div className="mx-2">
-          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/addItem" element={<AddItem />} />

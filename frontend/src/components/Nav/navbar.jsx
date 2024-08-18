@@ -4,10 +4,12 @@ import { HiOutlineShoppingCart } from "react-icons/hi2";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import useCartStore from "../zustandStore/cartStore";
+import logo from "../../assets/logo.png";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [scrolled, setScrolled] = useState(false);
 
   const cart = useCartStore((state) => state.cart);
 
@@ -22,16 +24,24 @@ function Navbar() {
       setShowMenu(false);
     };
 
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <nav
-      className={`flex flex-col m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 py-3 z-20 w-[306px] sm:w-full`}
+      className={`flex flex-col m-auto items-center justify-between font-bold text-sm bg-main sticky top-0 p-3 z-20 w-[306px] sm:w-full transition-colors duration-300 ${
+        scrolled ? "bg-navColor text-white" : "bg-black"
+      }`}
     >
       <div className="flex items-center justify-between w-full max-w-[1200px]">
         <div
@@ -59,11 +69,7 @@ function Navbar() {
           <li className=" hidden sm:block">Products</li>
         </Link>
         <Link to="/">
-          <img
-            src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQUrOuxTLlno4UizjDyq8IhFZTT0tE-PVcOT24RNjJ2A5IbRwJOvUEMT7SHY4BZYcikYG5ytDPCV2Vj749-R9nYxV-Lu2KDwFljVigT2KpZfPVo3E9H9rf1TA"
-            alt=""
-            className="h-16 rounded-full"
-          />
+          <img src={logo} alt="" className="h-20 rounded-full" />
         </Link>
         <Link className=" hidden sm:block" to="/addItem">
           <li className=" hidden sm:block">About us</li>
